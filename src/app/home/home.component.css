@@ -1,4 +1,8 @@
 #home .hero {
+  background-image: url("../../assets/images/home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   z-index: 1;
 }
 #home .overlay {
