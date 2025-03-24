@@ -23,4 +23,20 @@ export class HomeComponent {
   }
 
   travels: Travel[] = [];
+
+  fullName: string = '';
+  email: string = '';
+  phone: string = '';
+  subject: string = '';
+  message: string = '';
+
+  onSubmit() {
+    console.log('Form submitted', {
+      fullName: this.fullName,
+      email: this.email,
+      phone: this.phone,
+      subject: this.subject,
+      message: this.message,
+    });
+  }
 }
