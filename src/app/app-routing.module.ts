@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   // {
-    // redirectTo: "search",
+  // redirectTo: "search",
   // },
   {
-    path: 'search',
-    // component: SearchComponent,
+    path: '',
+    component: HomeComponent,
   },
-  {
-    path: 'booking',
-    // component: BookingComponent,
-  },
+  // {
+  // path: 'booking',
+  // component: BookingComponent,
+  // },
 ];
 
 @NgModule({
