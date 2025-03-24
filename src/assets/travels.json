@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Paris",
+    "price": "€1200",
+    "desc": "Paris, the romantic city of love, is known for its incredible food, rich history, and world-class culture. From the iconic Eiffel Tower to the beautiful streets of Montmartre, there's always something new to discover. Experience the magic of Parisian cafes, museums, and the charm of this amazing city that captivates travelers from all over the world.",
+    "startDate": "2025-04-01T00:00:00Z",
+    "endDate": "2025-04-10T00:00:00Z",
+    "image": "assets/images/paris.jpg"
+  },
+  {
+    "id": 2,
+    "name": "London",
+    "price": "£1000",
+    "desc": "London is a city steeped in history, offering a mix of old-world charm and modern vibrancy. From the grandeur of Buckingham Palace and the Tower of London to the cultural hub of the West End and the British Museum, London offers something for everyone. Explore its iconic landmarks, world-class shopping, and diverse food scene, making it a must-visit destination for any traveler.",
+    "startDate": "2025-05-01T00:00:00Z",
+    "endDate": "2025-05-07T00:00:00Z",
+    "image": "assets/images/london.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Tokyo",
+    "price": "¥150000",
+    "desc": "Tokyo is a vibrant and bustling city where ancient tradition meets modern innovation. The city offers an amazing blend of cutting-edge technology, exquisite food, and rich cultural heritage. From the serenity of traditional temples to the excitement of shopping in Shibuya and the incredible culinary scene, Tokyo is a place where you can experience the future while embracing the past.",
+    "startDate": "2025-06-01T00:00:00Z",
+    "endDate": "2025-06-10T00:00:00Z",
+    "image": "assets/images/tokyo.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Damascus",
+    "price": "SYP 50000",
+    "desc": "Damascus, the ancient city of Syria, offers a rich tapestry of history and culture that dates back thousands of years. Explore the winding streets of the Old City, visit the stunning Umayyad Mosque, and discover ancient markets where time seems to stand still. With its mix of ancient architecture and modern influences, Damascus is a true gem for history enthusiasts and curious travelers alike.",
+    "startDate": "2025-07-01T00:00:00Z",
+    "endDate": "2025-07-07T00:00:00Z",
+    "image": "assets/images/damascus.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Egypt",
+    "price": "EGP 8000",
+    "desc": "Egypt is a land of mysteries and wonders, home to the majestic pyramids, the awe-inspiring Sphinx, and ancient temples that have stood the test of time. Beyond the pyramids, Egypt offers a wealth of cultural experiences, including cruising along the Nile River, exploring the bustling markets of Cairo, and visiting Luxor’s Valley of the Kings. Egypt is a must-visit destination for anyone fascinated by ancient civilizations and desert adventures.",
+    "startDate": "2025-08-01T00:00:00Z",
+    "endDate": "2025-08-14T00:00:00Z",
+    "image": "assets/images/egypt.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Spain",
+    "price": "€900",
+    "desc": "Spain is a vibrant and diverse country known for its passionate culture, stunning landscapes, and delicious cuisine. From the lively streets of Barcelona to the historical sites in Madrid and the breathtaking beaches of Costa Brava, Spain offers something for every traveler. Whether you’re indulging in tapas, exploring ancient castles, or soaking up the sun on a Mediterranean beach, Spain promises a memorable experience.",
+    "startDate": "2025-09-01T00:00:00Z",
+    "endDate": "2025-09-07T00:00:00Z",
+    "image": "assets/images/spain.jpg"
+  }
+]

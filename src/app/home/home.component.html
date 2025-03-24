@@ -1,6 +1,6 @@
 <main id="home">
   <section class="hero bg-danger text-center text-white position-relative">
-    <div class="container">
+    <div class="container py-5">
       <h1 class="fw-bold display-4">Welcome to Our Company</h1>
       <p class="mb-4 lead">
         Here to take you anywhere, anytime. Your trusted travel partner!
@@ -15,5 +15,20 @@
     <div
       class="overlay w-100 h-100 bg-dark d-none d-md-block position-absolute top-0 right-0 opacity-50"
     ></div>
+  </section>
+
+  <section class="our-travels">
+    <h1 class="mb-4 text-capitalize fw-bold fs-3 text-black">
+      <i class="bi bi-stars text-warning"></i> Show our travels:
+    </h1>
+
+    <div class="row g-4">
+      <card-viewer
+        class="col-xl-3 col-lg-4 col-md-6 col-12"
+        *ngFor="let travel of travels"
+        [travel]="travel"
+        [attr.data-index]="travel.id"
+      ></card-viewer>
+    </div>
   </section>
 </main>

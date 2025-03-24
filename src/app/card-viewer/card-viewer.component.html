@@ -1,0 +1,22 @@
+<div class="card shadow">
+  <img [src]="travel.image" class="card-img-top" [alt]="travel.name" />
+
+  <div class="card-body">
+    <div class="card-title d-flex align-items-center justify-content-between">
+      <h5 class="m-0 fw-semibold text-danger">{{ travel.name }}</h5>
+      <span class="fw-semibold text-muted">{{ travel.price }}</span>
+    </div>
+
+    <p class="card-text">
+      {{ safeDescription() }}
+    </p>
+  </div>
+
+  <div class="card-footer">
+    <a href="#" class="btn btn-primary">Book now</a>
+
+    <span class="date text-black-50">
+      {{ formattedDate() }}
+    </span>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.card {
+  height: 100%;
+}
+
+img {
+  height: 220px;
+}
+
+.date {
+  font-size: 12px;
+  float: right;
+}
