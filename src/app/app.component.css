@@ -9,3 +9,13 @@ footer a {
 footer a:hover {
   color: blue;
 }
+::ng-deep .overlay {
+  z-index: -1;
+}
+::ng-deep section {
+  padding: 50px 0;
+}
+::ng-deep .hero {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}

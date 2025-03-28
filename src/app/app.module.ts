@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeModule } from './home/home.module';
+import { SearchModule } from './search/search.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,13 @@ import { HomeModule } from './home/home.module';
     // SearchComponent,
     // BookingComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbCollapseModule, HomeModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbCollapseModule,
+    HomeModule,
+    SearchModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
