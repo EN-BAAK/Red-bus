@@ -7,12 +7,18 @@ import { HomeComponent } from './home/home.component';
 import { CardViewerComponent } from './card-viewer/card-viewer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HeroComponent } from './home/hero/hero.component';
+import { TravelsComponent } from './home/travels/travels.component';
+import { ContactComponent } from './home/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CardViewerComponent,
+    HeroComponent,
+    TravelsComponent,
+    ContactComponent,
     // SearchComponent,
     // BookingComponent
   ],

@@ -1,0 +1,11 @@
+footer {
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+footer a {
+  color: white;
+  user-select: none;
+}
+footer a:hover {
+  color: blue;
+}

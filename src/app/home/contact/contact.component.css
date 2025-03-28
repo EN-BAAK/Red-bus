@@ -1,0 +1,14 @@
+.contact-us .contact-side {
+  background-image: url("../../../assets/images/contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+.contact-us .form-holder textarea {
+  height: 200px;
+  resize: none;
+}
+.contact-us .form-holder button {
+  width: fit-content;
+}
