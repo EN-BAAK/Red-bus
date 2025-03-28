@@ -37,5 +37,6 @@ export class ModalAddComponent {
 
   addNewTravel() {
     this.addTravel.emit(this.travel.value);
+    this.travel.reset()
   }
 }

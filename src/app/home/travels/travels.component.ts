@@ -14,7 +14,7 @@ export class TravelsComponent {
   ngOnInit(): void {
     this.travelService.getTravels().subscribe(
       (data: any) => {
-        this.travels = data;
+        this.travels = data.slice(0, 8);
         this.loading = false;
       },
       (error: any) => {
