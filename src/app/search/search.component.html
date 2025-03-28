@@ -3,7 +3,10 @@
     content="<p>Search, book, <span class='fw-semibold'>live your life</span></p>"
   />
 
-  <search-form (filterChange)="updateFilters($event)" />
+  <search-form
+    (filterChange)="updateFilters($event)"
+    (toggleModal)="toggleModal()"
+  />
 
   <travels [travels]="filteredTravels" [loading]="loading" />
 </main>

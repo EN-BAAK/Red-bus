@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { TravelFilters } from '../../../utils/types';
 
 @Component({
   selector: 'search-form',
@@ -7,19 +8,26 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './search-form.component.css',
 })
 export class SearchFormComponent {
-  name: string = '';
-  startDate: string = '';
-  endDate: string = '';
-  maxPrice: number | null = null;
+  filters: TravelFilters = {
+    name: '',
+    startDate: '',
+    endDate: '',
+    maxPrice: null,
+  };
 
   @Output() filterChange = new EventEmitter<any>();
+  @Output() toggleModal = new EventEmitter<any>();
 
   onInputChange() {
     this.filterChange.emit({
-      name: this.name,
-      startDate: this.startDate,
-      endDate: this.endDate,
-      maxPrice: this.maxPrice,
+      name: this.filters.name,
+      startDate: this.filters.startDate,
+      endDate: this.filters.endDate,
+      maxPrice: this.filters.maxPrice,
     });
+  }
+
+  onAddTravel() {
+    this.toggleModal.emit();
   }
 }

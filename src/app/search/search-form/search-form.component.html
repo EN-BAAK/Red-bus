@@ -5,7 +5,7 @@
     <input
       type="text"
       class="form-control pill-input"
-      [(ngModel)]="name"
+      [(ngModel)]="filters.name"
       name="name"
       placeholder="Name"
       required
@@ -14,7 +14,7 @@
     <input
       type="date"
       class="form-control pill-input"
-      [(ngModel)]="startDate"
+      [(ngModel)]="filters.startDate"
       name="startDate"
       required
       (input)="onInputChange()"
@@ -22,7 +22,7 @@
     <input
       type="date"
       class="form-control pill-input"
-      [(ngModel)]="endDate"
+      [(ngModel)]="filters.endDate"
       name="endDate"
       required
       (input)="onInputChange()"
@@ -30,11 +30,19 @@
     <input
       type="number"
       class="form-control pill-input"
-      [(ngModel)]="maxPrice"
+      [(ngModel)]="filters.maxPrice"
       name="maxPrice"
       placeholder="Max Price"
       required
       (input)="onInputChange()"
     />
+
+    <button
+      type="button"
+      class="btn btn-primary mx-auto rounded-circle"
+      (click)="onAddTravel()"
+    >
+      <i class="bi bi-plus"></i>
+    </button>
   </form>
 </div>
