@@ -2,15 +2,15 @@
 #home .overlay {
   z-index: -1;
 }
+#home .hero {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
 #home section {
   padding: 50px 0;
 }
 #home .contact-us {
   height: 800px;
-}
-#home .contact-us .contact-side,
-#home .contact-us .form-holder {
-  height: 580px;
 }
 #home .contact-us .contact-side {
   background-image: url("../../assets/images/contact.jpg");
@@ -18,4 +18,10 @@
   background-size: cover;
   background-position: center center;
   z-index: 1;
+}
+#home .contact-us .form-holder textarea {
+  height: 200px;
+}
+#home .contact-us .form-holder button {
+  width: fit-content;
 }
