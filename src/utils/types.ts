@@ -33,3 +33,18 @@ export type AddTravelForm = {
   startDate: ExDate;
   endDate: ExDate;
 };
+
+export type BusBookingSlot = {
+  id: number;
+  capacity: number;
+  travelId: number;
+  reserved: number[];
+};
+
+export type TravelBus = {
+  id: number;
+  capacity: number;
+  travelId: number;
+  reserved: number[];
+  name: string;
+};
