@@ -1,5 +1,7 @@
 <main id="home">
-  <section class="hero bg-danger text-center text-white position-relative overflow-hidden">
+  <section
+    class="hero bg-danger text-center text-white position-relative overflow-hidden"
+  >
     <div class="container py-5">
       <h1 class="fw-bold display-4">Welcome to Our Company</h1>
       <p class="mb-4 lead">
@@ -18,125 +20,178 @@
   </section>
 
   <section class="our-travels">
-    <h1 class="mb-4 text-capitalize fw-bold fs-3 text-black">
-      <i class="bi bi-stars text-warning"></i> Show our travels:
-    </h1>
+    <div class="container">
+      <h1 class="mb-4 text-capitalize fw-bold fs-3 text-black">
+        <i class="bi bi-stars text-warning"></i> Show our travels:
+      </h1>
 
-    <div class="row g-4">
-      <card-viewer
-        class="col-xl-3 col-lg-4 col-md-6 col-12"
-        *ngFor="let travel of travels"
-        [travel]="travel"
-        [attr.data-index]="travel.id"
-      ></card-viewer>
+      <div class="row g-4">
+        <card-viewer
+          class="col-xl-3 col-lg-4 col-md-6 col-12"
+          *ngFor="let travel of travels"
+          [travel]="travel"
+          [attr.data-index]="travel.id"
+        ></card-viewer>
+      </div>
     </div>
   </section>
 
   <section class="contact-us">
-    <h1 class="mb-4 text-capitalize fw-bold fs-3 text-black">
-      <i class="bi bi-stars text-warning"></i> Contact us:
-    </h1>
+    <div class="container">
+      <h1 class="mb-4 text-capitalize fw-bold fs-3 text-black">
+        <i class="bi bi-stars text-warning"></i> Contact us:
+      </h1>
 
-    <div class="row justify-content-between align-items-center">
-      <div class="form-holder col-lg-6 col-12">
-        <form (ngSubmit)="onSubmit()">
-          <div class="mb-3">
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              placeholder="Enter your name"
-              [(ngModel)]="fullName"
-              name="phone"
-              required
-            />
-          </div>
+      <div class="row justify-content-between align-items-center">
+        <div class="form-holder col-lg-6 col-12">
+          <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your name"
+                [(ngModel)]="fullName"
+                name="phone"
+                required
+              />
+            </div>
 
-          <div class="mb-3">
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              placeholder="Enter your email"
-              [(ngModel)]="email"
-              name="email"
-              required
-            />
-          </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+                [(ngModel)]="email"
+                name="email"
+                required
+              />
+            </div>
 
-          <div class="mb-3">
-            <input
-              type="tel"
-              class="form-control"
-              id="phone"
-              placeholder="Enter your phone number"
-              [(ngModel)]="phone"
-              name="phone"
-              required
-            />
-          </div>
+            <div class="mb-3">
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                placeholder="Enter your phone number"
+                [(ngModel)]="phone"
+                name="phone"
+                required
+              />
+            </div>
 
-          <div class="mb-3">
-            <select
-              class="form-select"
-              id="subject"
-              [(ngModel)]="subject"
-              name="subject"
-              required
-            >
-              <option value="" disabled selected>Select a subject</option>
-              <option value="1">General Inquiry</option>
-              <option value="2">Support</option>
-              <option value="3">Feedback</option>
-            </select>
-          </div>
+            <div class="mb-3">
+              <select
+                class="form-select"
+                id="subject"
+                [(ngModel)]="subject"
+                name="subject"
+                required
+              >
+                <option value="" disabled selected>Select a subject</option>
+                <option value="1">General Inquiry</option>
+                <option value="2">Support</option>
+                <option value="3">Feedback</option>
+              </select>
+            </div>
 
-          <div class="mb-3">
-            <textarea
-              class="form-control"
-              id="message"
-              rows="4"
-              placeholder="Write your message"
-              [(ngModel)]="message"
-              name="message"
-              required
-            ></textarea>
-          </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                id="message"
+                rows="4"
+                placeholder="Write your message"
+                [(ngModel)]="message"
+                name="message"
+                required
+              ></textarea>
+            </div>
 
-          <div class="d-grid">
-            <button type="submit" class="btn btn-primary btn-lg mx-auto d-block">
-              Send Message
-            </button>
-          </div>
-        </form>
-      </div>
+            <div class="d-grid">
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg mx-auto d-block"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
 
-      <div class="contact-side col-lg-6 d-lg-block d-none position-relative">
-        <div class="p-5 d-flex flex-column gap-2 align-items-center text-white">
-          <h2 class="text-center">Get in Touch</h2>
-
-          <p class="text-center">
-            If you have any questions or need assistance, feel free to reach out
-            to us. Our team is always here to help.
-          </p>
-
-          <h5><i class="bi bi-geo-alt"></i> Our Office</h5>
-          <p>1234 Travel Street, City Name, Country</p>
-
-          <h5><i class="bi bi-phone"></i> Call Us</h5>
-          <p>+963 *** *** ***</p>
-
-          <h5><i class="bi bi-envelope"></i> Email Us</h5>
-          <p>contact&#64;myemail.com</p>
-
-          <h5><i class="bi bi-clock"></i> Business Hours</h5>
-          <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-
+        <div class="contact-side col-lg-6 d-lg-block d-none position-relative">
           <div
-            class="overlay w-100 h-100 bg-dark d-none d-md-block position-absolute top-0 left-0 opacity-50"
-          ></div>
+            class="p-5 d-flex flex-column gap-2 align-items-center text-white"
+          >
+            <h2 class="text-center">Get in Touch</h2>
+
+            <p class="text-center">
+              If you have any questions or need assistance, feel free to reach
+              out to us. Our team is always here to help.
+            </p>
+
+            <h5><i class="bi bi-geo-alt"></i> Our Office</h5>
+            <p>1234 Travel Street, City Name, Country</p>
+
+            <h5><i class="bi bi-phone"></i> Call Us</h5>
+            <p>+963 *** *** ***</p>
+
+            <h5><i class="bi bi-envelope"></i> Email Us</h5>
+            <p>contact&#64;myemail.com</p>
+
+            <h5><i class="bi bi-clock"></i> Business Hours</h5>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+
+            <div
+              class="overlay w-100 h-100 bg-dark d-none d-md-block position-absolute top-0 left-0 opacity-50"
+            ></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <footer class="bg-danger py-5 text-white">
+    <div class="container">
+      <div class="row row-gap-2">
+        <!-- About Us -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <h5 class="fw-bold">About Us</h5>
+          <p>
+            We are a travel company committed to providing the best travel
+            experiences with top-notch customer service and exclusive deals.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <h5 class="fw-bold">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li>
+              <a href="/about" class="text-decoration-none">About</a>
+            </li>
+            <li>
+              <a href="/services" class="text-decoration-none">Services</a>
+            </li>
+            <li>
+              <a href="/contact" class="text-decoration-none">Contact</a>
+            </li>
+            <li>
+              <a href="/faq" class="text-decoration-none">FAQ</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <h5 class="fw-bold">Contact Info</h5>
+          <p>
+            <i class="bi bi-geo-alt"></i> 1234 Travel Street, City Name, Country
+          </p>
+          <p><i class="bi bi-phone"></i> +963 *** *** ***</p>
+          <p><i class="bi bi-envelope"></i> contact&#64;myemail.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </main>
