@@ -7,7 +7,6 @@
 }
 .contact-us .form-holder textarea {
   height: 200px;
-  resize: none;
 }
 .contact-us .form-holder button {
   width: fit-content;

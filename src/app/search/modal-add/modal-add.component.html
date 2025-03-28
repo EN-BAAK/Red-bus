@@ -1,0 +1,145 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add Travel</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+
+  <div class="modal-body">
+    <form
+      [formGroup]="travel"
+      (ngSubmit)="addNewTravel(); modal.dismiss('submitted')"
+    >
+      <div class="mb-3">
+        <label for="cityName">City name</label>
+        <div class="input-group">
+          <input
+            id="cityName"
+            class="form-control"
+            name="cityName"
+            formControlName="name"
+            placeholder="City Name"
+          />
+        </div>
+
+        <small
+          *ngIf="travel.get('name')?.invalid && travel.get('name')?.touched"
+          class="text-danger"
+        >
+          City name is required.
+        </small>
+      </div>
+
+      <div class="mb-3">
+        <label for="desc">Description</label>
+        <div class="input-group">
+          <textarea
+            id="desc"
+            class="form-control"
+            name="desc"
+            formControlName="desc"
+            placeholder="About the city"
+          ></textarea>
+        </div>
+        <div
+          *ngIf="travel.get('desc')?.invalid && travel.get('desc')?.touched"
+          class="text-danger"
+        >
+          Description must be at least 20 characters.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="price">Cost</label>
+        <div class="input-group">
+          <input
+            id="price"
+            class="form-control"
+            name="price"
+            type="number"
+            placeholder="$100"
+            formControlName="price"
+          />
+        </div>
+        <div
+          *ngIf="travel.get('price')?.invalid && travel.get('price')?.touched"
+          class="text-danger"
+        >
+          Price is required and must be greater than 0.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="startDate">Start on:</label>
+        <div class="input-group">
+          <input
+            id="startDate"
+            class="form-control"
+            placeholder="yyyy-mm-dd"
+            name="startDate"
+            ngbDatepicker
+            #startDate="ngbDatepicker"
+            formControlName="startDate"
+          />
+          <button
+            class="btn btn-outline-secondary bi bi-calendar3"
+            (click)="startDate.toggle()"
+            type="button"
+          ></button>
+        </div>
+        <div
+          *ngIf="
+            travel.get('startDate')?.invalid && travel.get('startDate')?.touched
+          "
+          class="text-danger"
+        >
+          Start date is required.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="endDate">End on:</label>
+        <div class="input-group">
+          <input
+            id="endDate"
+            class="form-control"
+            placeholder="yyyy-mm-dd"
+            name="endDate"
+            ngbDatepicker
+            #endDate="ngbDatepicker"
+            formControlName="endDate"
+          />
+          <button
+            class="btn btn-outline-secondary bi bi-calendar3"
+            (click)="endDate.toggle()"
+            type="button"
+          ></button>
+        </div>
+        <div
+          *ngIf="
+            travel.get('endDate')?.invalid && travel.get('endDate')?.touched
+          "
+          class="text-danger"
+        >
+          End date is required.
+        </div>
+      </div>
+
+      <div *ngIf="travel.invalid && travel.touched" class="alert alert-danger">
+        Please correct the errors in the form before submitting.
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-outline-secondary ms-auto d-block"
+        [disabled]="travel.invalid"
+      >
+        Add
+      </button>
+    </form>
+  </div>
+</ng-template>

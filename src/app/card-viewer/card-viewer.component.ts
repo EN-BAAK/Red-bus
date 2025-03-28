@@ -14,6 +14,11 @@ export class CardViewerComponent {
 
   @Input() travel!: Travel;
 
+  validImage =
+    this.travel && this.travel.image
+      ? this.travel.image
+      : 'assets/images/empty.jpg';
+
   safeDescription() {
     let description = this.travel.desc;
 

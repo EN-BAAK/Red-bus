@@ -6,11 +6,11 @@ export type AppRoutes = {
 export type Travel = {
   id: number;
   name: string;
-  price: number;
+  price: number | null;
   desc: string;
   startDate: Date;
   endDate: Date;
-  image: string;
+  image?: string;
 };
 
 export type TravelFilters = {
@@ -18,4 +18,18 @@ export type TravelFilters = {
   startDate: string;
   endDate: string;
   maxPrice: number | null;
+};
+
+export type ExDate = {
+  year: number;
+  month: number;
+  day: number;
+};
+
+export type AddTravelForm = {
+  name: string;
+  price: number | null;
+  desc: string;
+  startDate: ExDate;
+  endDate: ExDate;
 };

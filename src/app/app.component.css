@@ -28,3 +28,7 @@ footer a:hover {
 ::ng-deep input[type="number"] {
   -moz-appearance: textfield;
 }
+
+::ng-deep textarea {
+  resize: none
+}

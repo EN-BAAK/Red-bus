@@ -5,8 +5,10 @@
 
   <search-form
     (filterChange)="updateFilters($event)"
-    (toggleModal)="toggleModal()"
+    (toggleModal)="openChildModal()"
   />
 
   <travels [travels]="filteredTravels" [loading]="loading" />
+
+  <app-modal-add (addTravel)="addTravel($event)" />
 </main>

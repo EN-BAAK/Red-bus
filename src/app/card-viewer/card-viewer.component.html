@@ -1,5 +1,14 @@
 <div class="card shadow">
-  <img [src]="travel.image" class="card-img-top" [alt]="travel.name" />
+  <div *ngIf="travel.image">
+    <img [src]="travel.image" class="card-img-top" [alt]="travel.name" />
+  </div>
+  <div *ngIf="!travel.image">
+    <img
+      src="assets/images/empty.jpg"
+      class="card-img-top"
+      [alt]="travel.name"
+    />
+  </div>
 
   <div class="card-body">
     <div class="card-title d-flex align-items-center justify-content-between">
