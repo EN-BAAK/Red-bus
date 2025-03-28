@@ -1,0 +1,20 @@
+form {
+  margin: -35px 0 50px;
+}
+
+@media (min-width: 768px) {
+  .pill-input {
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .rounded-pill {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+  }
+}

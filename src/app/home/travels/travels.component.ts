@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Travel } from '../../../utils/types';
 import { TravelsService } from '../../travels.service';
 

@@ -1,1 +1,40 @@
-<p>search-form works!</p>
+<div class="container">
+  <form
+    class="bg-white p-3 d-flex align-items-center flex-md-nowrap flex-wrap gap-4 rounded-pill shadow position-relative"
+  >
+    <input
+      type="text"
+      class="form-control pill-input"
+      [(ngModel)]="name"
+      name="name"
+      placeholder="Name"
+      required
+      (input)="onInputChange()"
+    />
+    <input
+      type="date"
+      class="form-control pill-input"
+      [(ngModel)]="startDate"
+      name="startDate"
+      required
+      (input)="onInputChange()"
+    />
+    <input
+      type="date"
+      class="form-control pill-input"
+      [(ngModel)]="endDate"
+      name="endDate"
+      required
+      (input)="onInputChange()"
+    />
+    <input
+      type="number"
+      class="form-control pill-input"
+      [(ngModel)]="maxPrice"
+      name="maxPrice"
+      placeholder="Max Price"
+      required
+      (input)="onInputChange()"
+    />
+  </form>
+</div>
