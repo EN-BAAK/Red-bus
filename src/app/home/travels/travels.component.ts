@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Travel } from '../../../utils/types';
-import { TravelsService } from '../../travels.service';
+import { TravelsService } from '../../services/travels.service';
 
 @Component({
   selector: 'travels',

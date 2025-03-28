@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, Observable, throwError, tap } from 'rxjs';
-import { AddTravelForm, ExDate, Travel } from '../utils/types';
+import { AddTravelForm, ExDate, Travel } from '../../utils/types';
 
 @Injectable({
   providedIn: 'root',

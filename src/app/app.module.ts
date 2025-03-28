@@ -5,19 +5,17 @@ import { AppComponent } from './app.component';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeModule } from './home/home.module';
 import { SearchModule } from './search/search.module';
+import { BookingModule } from './booking/booking.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    // SearchComponent,
-    // BookingComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbCollapseModule,
     HomeModule,
     SearchModule,
+    BookingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

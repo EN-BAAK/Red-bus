@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { TravelsService } from '../travels.service';
+import { TravelsService } from '../services/travels.service';
 import { AddTravelForm, Travel, TravelFilters } from '../../utils/types';
 import { ModalAddComponent } from './modal-add/modal-add.component';
 
