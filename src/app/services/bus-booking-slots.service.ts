@@ -10,7 +10,7 @@ import {
   tap,
   throwError,
 } from 'rxjs';
-import { BusBookingSlot, TravelBus } from '../../utils/types';
+import { BusBookingSlot, TravelRoute } from '../../utils/types';
 
 @Injectable({
   providedIn: 'root',
@@ -21,7 +21,7 @@ export class BusBookingSlotsService {
     private travelServices: TravelsService
   ) {}
 
-  private busBookingSlotsSubject = new BehaviorSubject<TravelBus[]>([]);
+  private busBookingSlotsSubject = new BehaviorSubject<TravelRoute[]>([]);
   private busBookingSlots$ = this.busBookingSlotsSubject.asObservable();
 
   private handleError(error: HttpErrorResponse) {
@@ -39,7 +39,7 @@ export class BusBookingSlotsService {
     );
   }
 
-  getBusBookingSlots(): Observable<TravelBus[]> {
+  getBusBookingSlots(): Observable<TravelRoute[]> {
     if (
       !this.busBookingSlotsSubject.value ||
       !this.busBookingSlotsSubject.value.length
@@ -49,7 +49,7 @@ export class BusBookingSlotsService {
         this.http.get<BusBookingSlot[]>('assets/busBookingSlots.json'),
       ]).pipe(
         map(([travels, busBookingSlots]) => {
-          const travelBus: TravelBus[] = busBookingSlots.map((slot) => {
+          const travelBus: TravelRoute[] = busBookingSlots.map((slot) => {
             const travel = travels.find((t) => t.id === slot.travelId);
             if (travel) {
               return {
@@ -65,7 +65,7 @@ export class BusBookingSlotsService {
           });
           return travelBus;
         }),
-        tap((data: TravelBus[]) => this.busBookingSlotsSubject.next(data)),
+        tap((data: TravelRoute[]) => this.busBookingSlotsSubject.next(data)),
         catchError(this.handleError)
       );
     } else {

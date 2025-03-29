@@ -41,7 +41,7 @@ export type BusBookingSlot = {
   reserved: number[];
 };
 
-export type TravelBus = {
+export type TravelRoute = {
   id: number;
   capacity: number;
   travelId: number;

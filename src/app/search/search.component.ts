@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TravelsService } from '../services/travels.service';
 import { AddTravelForm, Travel, TravelFilters } from '../../utils/types';
 import { ModalAddComponent } from './modal-add/modal-add.component';
@@ -9,7 +9,7 @@ import { ModalAddComponent } from './modal-add/modal-add.component';
   templateUrl: './search.component.html',
   styleUrl: './search.component.css',
 })
-export class SearchComponent {
+export class SearchComponent implements OnInit {
   constructor(private travelService: TravelsService) {}
 
   ngOnInit(): void {

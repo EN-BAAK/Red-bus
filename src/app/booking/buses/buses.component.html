@@ -1,5 +1,5 @@
 <div
-  *ngIf="loading === true; else showTravels"
+  *ngIf="loading === true; else showTravelRoutes"
   class="d-flex align-items-center justify-content-center my-4"
 >
   <div class="spinner-border text-primary" role="status">
@@ -7,13 +7,13 @@
   </div>
 </div>
 
-<ng-template #showTravels>
-  <div class="container pb-5">
+<ng-template #showTravelRoutes>
+  <div class="container py-5">
     <div class="row g-4">
-      <card-viewer
+      <bus-card
         class="col-xl-3 col-lg-4 col-md-6 col-12"
-        *ngFor="let travel of travels"
-        [travel]="travel"
+        *ngFor="let travel of travelRoute"
+        [travelRoute]="travel"
         [attr.data-index]="travel.id"
       />
     </div>
