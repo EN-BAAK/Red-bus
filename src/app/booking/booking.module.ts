@@ -10,4 +10,3 @@ import { BusesComponent } from './buses/buses.component';
   imports: [CommonModule, HeroModule],
 })
 export class BookingModule {}
-
