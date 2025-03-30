@@ -1,60 +1,87 @@
-# RedBus
+# Red Bus
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+## Overview
 
-## Development server
+Red Bus is a web application built using **HTML, CSS, JavaScript, Bootstrap 5, TypeScript, and Angular**. The application allows users to browse available travels, filter them based on criteria, book buses, and manage seat reservations.
 
-To start a local development server, run:
+**Idea Credit:** This project idea is inspired by the **LEARNING PARTNER** channel on YouTube, but the design and code have been implemented in my own way.
 
-```bash
-ng serve
-```
+## Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### General Features
 
-## Code scaffolding
+- **Header & Footer**: Available on all pages.
+- **Hero Section**: Present on all pages for a consistent UI experience.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Pages
 
-```bash
-ng generate component component-name
-```
+#### Home Page
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Our Travels**: Displays all available travel options as cards containing:
+  - City name
+  - Cost
+  - Description
+  - Start date
+  - End date
+  - Booking button
+- **Contact Us**: A section for user inquiries and support.
 
-```bash
-ng generate --help
-```
+#### Search Page
 
-## Building
+- Displays all available travels like the Home Page.
+- Includes filtering capabilities based on:
+  - Travel name
+  - Maximum cost
+  - Start date
+  - End date
 
-To build the project run:
+#### Booking Page
 
-```bash
-ng build
-```
+- Displays all available buses along with their destination cities.
+- Each bus entry includes:
+  - City name
+  - Number of reserved seats
+  - Total capacity of the bus
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+#### Bus Page
 
-## Running unit tests
+- Displays detailed information about a specific bus.
+- Shows available and reserved seats.
+- Users can:
+  - **Book a seat**.
+  - **Free a reserved seat**.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## How to Use
 
-```bash
-ng test
-```
+Follow these steps to set up and run the project:
 
-## Running end-to-end tests
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/EN-BAAK/Red-bus
+   ```
+2. **Navigate to the project directory**:
+   ```sh
+   cd ./project
+   ```
+3. **Install dependencies**:
+   ```sh
+   npm install
+   ```
+4. **Build the project**:
+   ```sh
+   npm start
+   ```
 
-For end-to-end (e2e) testing, run:
+Now, open `http://localhost:4200` in your browser to view the application.
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### License
 
-## Additional Resources
+This project is open-source and available for personal and commercial use.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-https://unsplash.com/
+---
+
+### Author
+
+Developed by **Bassel abo khabsa**. Contributions are welcome!
