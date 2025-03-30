@@ -16,16 +16,19 @@ export class BusesComponent implements OnInit {
   }
 
   travelRoute: TravelRoute[] = [];
-  loading = true;
+  loading: boolean = true;
 
   getData() {
+    console.log("HI")
     this.busBookingSlotsService.getBusBookingSlots().subscribe(
       (data: TravelRoute[]) => {
         this.travelRoute = data;
+        console.log(this.loading)
         this.loading = false;
       },
       (error: Error) => {
         alert(error.message);
+        console.log(this.loading)
         this.loading = false;
       }
     );

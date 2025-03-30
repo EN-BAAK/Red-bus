@@ -4,7 +4,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import {
   BehaviorSubject,
   catchError,
-  forkJoin,
+  combineLatest,
   map,
   Observable,
   tap,
@@ -44,7 +44,7 @@ export class BusBookingSlotsService {
       !this.busBookingSlotsSubject.value ||
       !this.busBookingSlotsSubject.value.length
     ) {
-      return forkJoin([
+      return combineLatest([
         this.travelServices.getTravels(),
         this.http.get<BusBookingSlot[]>('assets/busBookingSlots.json'),
       ]).pipe(
