@@ -1,1 +1,46 @@
-<p>bus works! [{{ busId }}]</p>
+<main id="bus">
+  <!-- Loading Spinner -->
+  <div
+    *ngIf="loading === true; else showBus"
+    class="d-flex align-items-center justify-content-center my-4"
+  >
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Bus Seats Layout -->
+  <ng-template #showBus>
+    <div class="container py-5">
+      <div class="bus-layout">
+        <div
+          *ngFor="let row of seatRows; let rowIndex = index"
+          class="seat-row"
+        >
+          <!-- Left Side Seats -->
+          <button
+            class="seat btn btn-sm d-flex justify-content-center align-items-center rounded-2 fw-bold"
+            *ngFor="let seat of row.left"
+            [class.reserved]="isReserved(seat)"
+            (click)="toggleSeat(seat)"
+          >
+            {{ seat }}
+          </button>
+
+          <!-- Aisle (Empty Space) -->
+          <div class="aisle"></div>
+
+          <!-- Right Side Seats -->
+          <button
+            class="seat btn btn-sm d-flex justify-content-center align-items-center rounded-2 fw-bold"
+            *ngFor="let seat of row.right"
+            [class.reserved]="isReserved(seat)"
+            (click)="toggleSeat(seat)"
+          >
+            {{ seat }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</main>

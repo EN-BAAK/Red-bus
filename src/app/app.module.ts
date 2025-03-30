@@ -6,10 +6,9 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeModule } from './home/home.module';
 import { SearchModule } from './search/search.module';
 import { BookingModule } from './booking/booking.module';
-import { BusComponent } from './bus/bus.component';
 
 @NgModule({
-  declarations: [AppComponent, BusComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -72,4 +72,28 @@ export class BusBookingSlotsService {
       return this.busBookingSlots$;
     }
   }
+
+  getBusBookingSlotById(id: number): Observable<TravelRoute | undefined> {
+    return this.getBusBookingSlots().pipe(
+      map((busSlots: TravelRoute[]) =>
+        busSlots.find((slot: TravelRoute) => slot.id === id)
+      )
+    );
+  }
+
+  updateBusBookingSlot(id: number, position: number): void {
+    const updatedSlots = this.busBookingSlotsSubject.value.map((slot) => {
+      if (slot.id === id) {
+        const isReserved = slot.reserved.includes(position);
+        const updatedReserved = isReserved
+          ? slot.reserved.filter((seat) => seat !== position)
+          : [...slot.reserved, position];
+
+        return { ...slot, reserved: updatedReserved };
+      }
+      return slot;
+    });
+
+    this.busBookingSlotsSubject.next(updatedSlots);
+  }
 }
